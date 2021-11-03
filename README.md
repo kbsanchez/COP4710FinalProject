@@ -11,6 +11,7 @@ Technology Enviroments: PopSQL(DataBase Manager), IDE's (ATOM & VS Code)
 
 Sample(Not Final Version):  
 Reisgtering as a member:  
-![image](https://user-images.githubusercontent.com/64340009/138615143-dfa742e7-6804-4be2-ad33-30c54f809e2c.png)
+![image](https://user-images.githubusercontent.com/64340009/140015097-654e38f8-0555-4e68-9a89-0eb44a0ae7a2.png)
+
 Displaying all members: 
-![image](https://user-images.githubusercontent.com/64340009/138615163-b7cfab9c-7dc7-4e47-8689-505f5b71eb30.png)  
+![image](https://user-images.githubusercontent.com/64340009/140015139-1d363cde-3b70-4298-80b2-4ee029ad0e5d.png) 
