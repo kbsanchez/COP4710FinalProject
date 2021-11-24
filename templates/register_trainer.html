@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Register as a Trainer
+{% endblock %}
+
+{% block content %}
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {%if messages %}
+      {% for category, msg in messages%}
+          <div class="alert alert-{{category}}">
+            <button type="button" class="m1-2 mb-1 close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            {{msg}}
+            </div>
+      {% endfor %}
+    {% endif %}
+  {% endwith  %}
+
+<body class="text-center">
+  <br>
+  <div class="container">
+    <form class="form-register" style="color:white" method="post">
+      <img class="rounded-circle"
+        src="https://pbs.twimg.com/profile_images/1284889585135190016/bpa8tq0k_400x400.jpg"
+        alt="">
+      <h1 class="h1 mb-3 font-weight-normal">
+        Register as a Trainer
+      </h1>
+      <br>
+      <form class="form-register" style="color:white" action="users.html" method="post">
+        <input class="form-control" placeholder="User name" name='username'>
+        <br>
+        <input class="form-control" placeholder="Password" name='password'>
+        <br>
+        <input class="form-control" placeholder="First Name" name='firstname'>
+        <br>
+        <input class="form-control" placeholder="Last Name" name='lastname'>
+        <br>
+        <h5 for="data-dob" >Enter your DOB:</h5>
+        <input type="date" id="dinput" name="dinput" class="input"
+        format="dd/mm/yyyy" placeholder="DD-MM-YYYY">
+        <br>
+        <br>
+
+        <input type="submit" name="submit" value="Submit" class="btn btn-success btn-lg btn-block">
+      </form>
+    </form>
+  </div>
+</body>
+
+
+{% endblock %}
