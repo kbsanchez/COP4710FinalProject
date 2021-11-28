@@ -95,6 +95,11 @@ def schedule():
         clas = sql_commands.get_trainer_classes(session["admin"])
     return render_template('schedule.html', results=clas)
 
+@app.route('/member_count', methods=['GET', 'POST'])
+def member_count():
+    data = sql_commands.member_count_view()
+    return render_template('member_count.html', results=data)
+
 
 @app.route('/delete/<string:username>', methods=['GET', 'POST'])
 def delete(username):

@@ -43,5 +43,5 @@ with open('class_data.json') as file:
 #sql_commands.trainer_register("DatStreetBoi",1012)
 #testing the dropping of the class, this works results show in workbench
 #sql_commands.trainer_drop_class("DatStreetBoi", 1012)
-data = sql_commands.get_registered_ids('123')
+data = sql_commands.member_count_view()
 print(data)

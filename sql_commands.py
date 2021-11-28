@@ -5,7 +5,7 @@ from datetime import datetime
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    passwd="admin",
+    passwd="Me@t_Fl@p23-",
     database="gym"
 )
 
@@ -176,9 +176,9 @@ def member_register(username, classID):   # Returns a list with all the classes
 
 def member_drop_class(username, classID):
     sql = f"DELETE FROM registeredfor WHERE classID = '{classID}' AND username = '{username}'"
-    sql2 = f"UPDATE class SET capacity = capacity + 1 WHERE classID = '{classID}' "
+    # sql2 = f"UPDATE class SET capacity = capacity + 1 WHERE classID = '{classID}' "
     mycursor.execute(sql)
-    mycursor.execute(sql2)
+    # mycursor.execute(sql2)
     mydb.commit()
 
 # this function updates the instructor column in the class table to the username of a trainer
@@ -196,3 +196,11 @@ def trainer_drop_class(username, classID):
     sql = f"UPDATE class SET instructor = NULL WHERE classID = '{classID}' and instructor = '{username}'"
     mycursor.execute(sql)
     mydb.commit()
+
+# this is the view for a trainer to see the number of members inthe class they are teaching
+def member_count_view():
+    sql = "SELECT covidawarenessview.name, covidawarenessview.NumberOfMembers,covidawarenessview.time FROM gym.covidawarenessview;"
+    mycursor.execute(sql)
+    data = mycursor.fetchall()
+    return data
+
