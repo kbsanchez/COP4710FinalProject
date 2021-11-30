@@ -5,7 +5,7 @@ from datetime import datetime
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    passwd="Me@t_Fl@p23-",
+    passwd="admin",
     database="gym"
 )
 
@@ -203,4 +203,3 @@ def member_count_view():
     mycursor.execute(sql)
     data = mycursor.fetchall()
     return data
-
